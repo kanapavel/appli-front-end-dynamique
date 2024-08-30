@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+	max-width: 1200px;
+	margin: auto;
+	padding: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 16px;
+	padding: 8px;
+	background-color: #7451eb;
+	text-align: center;
+	color: white;
+}
+header img {
+	height: 60px;
+	margin-left: 1rem;
+}
+header h1 {
+	flex-grow: 1;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+}
+
+.filtres {
+	border-radius: 4px;
+	box-shadow: 0px 0px 4px gray;
+	margin: 8px;
+	padding: 8px;
+	min-width: 300px;
+	min-height: 400px;
+}
+.filtres h3 {
+	text-align: center;
+}
+
+.fiches {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	height: 500px;
+	flex: 1;
+	gap: 10px;
+	margin: 8px;
+	
+}
+.fiches article {
+	border-radius: 10px;
+	border: 1px solid rgb(199, 191, 191);
+	padding: 20px;
+}
+.fiches article img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 200px;
+}
+.fiches article p {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.fiches article h2 {
+	text-align: center;
+}
+button{
+	width: 100%;
+	padding: 15px 0;
+	border-radius: 5px;
+	border: none;
+	margin: 10px 0;
+	cursor: pointer;
+	background-color: #7451eb;
+	color: white;
+}
+button.submit{
+	width: 80px;
+}
+button:hover{
+	transition: .3s ease;
+	background-color: #5839be;
+}
+.formulaire-avis{
+	display: flexbox;
+	border-radius: 10px;
+	padding: 18px;
+}
+input{
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+	outline-color: #7451eb;
+	border: 1px solid rgb(134, 129, 129);
+}
+span.prix{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+.hidden {
+    display: none;
+}

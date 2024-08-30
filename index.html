@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Les Bonnes Pièces</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="node_modules/chart.js/dist/chart.umd.js" defer></script>
+		<script type="module" src="pieces.js"></script>
+	</head>
+	<body>
+		<header>
+			<img src="images/logo-les-bonnes-pieces.png" alt="LOGO">
+			<h1>Les Bonnes Pièces</h1>
+		</header>
+		<main>
+			<!-- Menu de recherche -->
+			<section class="filtres">
+				<h3>Filtres</h3>
+				<button class="btn-trier">Trier par prix croissant</button>
+				<br>
+				<button class="btn-filtrer">Filtrer les pièces non abordables</button>
+				<br>
+				<button class="btn-decroissant">Trier par prix décroissant</button>
+				<br>
+				<button class="btn-nodesc">Filtrer les pièces sans description</button>
+				<br>
+				<p>Prix maximum:</p>
+				<input type="range" name="prix-max" id="prix-max" min="0" max="60" step="5">
+				<span class="prix">30 €</span>
+				<!-- code a ajouter -->
+				<h3>Ajouter un avis</h3>
+				<form class="formulaire-avis">
+					<label for="number">Identifiant de la pièce :</label><br>
+					<input type="number" name="piece-id" id="number" min="1" max="5" required><br>
+					<label for="username">Nom d'utilisateur :</label><br>
+					<input type="text" name="utilisateur" id="username" required><br>
+					<label for="avis">Avis :</label><br>
+					<input type="text" name="commentaire" id="avis" required><br>
+					<label for="ranting">Nombre d'etoile</label><br>
+					<input type="number" name="ranting" id="ranting" min="1" max="5" required><br>
+					<button class="submit">Envoyer</button>
+				</form>
+				<button class="btn-maj">Mettre à jour les pieces</button><br>
+				<!-- canvas -->
+				<h3>Aperçu des avis</h3>
+				<canvas id="graphique-avis" width="300" height="300"></canvas>
+				<h3>Statistiques commentaires</h3>
+				<canvas id="graphique-dispo" width="300" height="300"></canvas>
+			</section>
+
+			<!-- Fiches produits -->
+			<section class="fiches">
+				<!-- Code ajouté -->
+				<div class="abordables">
+
+				</div>
+				<div class="disponibles">
+
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
